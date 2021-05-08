@@ -15,13 +15,18 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link @yield('menuMahasiswa')" href="/mahasiswa">Data Mahasiswa</a>
+                <a class="nav-link @yield('menuMahasiswa')" href="{{ route('mahasiswa') }}">Data Mahasiswa</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link @yield('menuDosen')" href="/dosen">Data Dosen</a>
+                <a class="nav-link @yield('menuDosen')" href="{{ route('dosen') }}">Data Dosen</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link @yield('menuGaleri')" href="/gallery">Gallery</a>
+                <a class="nav-link @yield('menuGaleri')" href="{{ route('galeri') }}">Gallery</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link"
+                    href="{{ route('informasi', ['fakultas' => 'FMIPA', 'jurusan' => 'Matematika']) }}">Info</a>
             </li>
         </ul>
     </nav>
