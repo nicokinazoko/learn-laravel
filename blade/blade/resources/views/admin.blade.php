@@ -16,18 +16,25 @@
         <div class="row">
             <div class="col-12">
 
-                <div class="alert alert-warning alert-dismissible fade show">
+                @component('layout.alert')
+                    @slot('class')
+                        warning
+                    @endslot
+                    @slot('judul')
+                        Peringatan
+                    @endslot
                     100 data mahasiswa perlu di perbaiki
-                    <button type="button" class="close" data-dismiss="alert">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="alert alert-danger alert-dismissible fade show">
+                @endcomponent
+
+                @component('layout.alert')
+                    @slot('class')
+                        danger
+                    @endslot
+                    @slot('judul')
+                        Awas
+                    @endslot
                     Hari ini deadline laporan perjalanan dinas!
-                    <button type="button" class="close" data-dismiss="alert">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                @endcomponent
 
             </div>
         </div>
